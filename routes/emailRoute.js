@@ -5,7 +5,7 @@ const { EmailService } = require('../src/EmailService');
 
 const emailService = new EmailService();
 
-router.post('/send', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const result = await emailService.sendEmail(req.body);
     res.status(200).json(result);
